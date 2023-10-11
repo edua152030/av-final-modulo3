@@ -1,0 +1,59 @@
+
+  .animation1 {
+    animation: imgModal 3s infinite;
+  }
+
+  @keyframes imgModal {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+      }
+  }
+
+  .animation2 {
+    position: relative;
+    animation: textModal 3s infinite;
+  }
+
+  @keyframes textModal {
+    0% {
+      opacity: 0.2;
+      left: 10px;
+    }
+    50% {
+      opacity: 0.5;
+      left: 50px;
+    }
+    100% {
+        opacity: 1;
+        left: 80px;
+      }
+  }
+
+
+  .animation3 {
+    animation: bodyModal 3s forwards;
+  }
+
+  @keyframes bodyModal {
+    0% {
+      opacity: 0.2;
+      background-image: url('../img/FUNDO.png');
+      
+    }
+    50% {
+      opacity: 0.5;
+      background-image: url('../img/FUNDO.png');
+    
+    }
+    100% {
+        opacity: 1;
+        background-image: url('../img/FUNDO.png');
+    
+      }
+  }
