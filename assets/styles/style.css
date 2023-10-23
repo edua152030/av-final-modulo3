@@ -1,3 +1,12 @@
+.bg-body {
+  background: linear-gradient(rgb(74, 74, 75), black);
+}
+
+  .charactersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .animation1 {
     animation: imgModal 3s infinite;
@@ -57,3 +66,21 @@
     
       }
   }
+
+  .white-text {
+    color: white;
+  }
+
+  .h-font{
+    width: 80px;
+  }
+
+  .textfooter{
+    color: rgb(71, 255, 4);
+  }
+
+  footer{
+    height: 200px;
+    background-color: black;
+  }
+

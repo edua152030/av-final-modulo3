@@ -29,14 +29,16 @@ async function loadCharacters(page = 1, name = '') {
       const card = document.createElement('div');
       card.classList.add('characters-card');
       card.innerHTML = `
-        <div>
-          <img class="characters-image" src="${character.image}" data-bs-toggle="modal" data-bs-target="#exampleModal-${index}" data-character='${JSON.stringify(character)}'>
+        <div class="character-card-inner">
+          <div class="fundoCard bd-light">
+            <img class="characters-image" src="${character.image}" data-bs-toggle="modal" data-bs-target="#exampleModal-${index}" data-character='${JSON.stringify(character)}'>
+          </div>
+          <div class="character-details">
+            <h2 class="white-text h-font">${character.name}</h2>
+            <p class="white-text">${character.status} - ${character.origin.name}</p>
+          </div>
         </div>
-        <div>
-          <h2>${character.name}</h2>
-          <p>${character.status} - ${character.origin.name}</p>
-        </div>
-
+    
         <!-- Modal -->
         <div class="modal fade animation3" id="exampleModal-${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -60,6 +62,7 @@ async function loadCharacters(page = 1, name = '') {
       prevPage.disabled = response.data.info.prev ? false : true;
       nextPage.disabled = response.data.info.next ? false : true;
     });
+    
   } catch (error) {
     console.log('Erro ao buscar personagens.', error);
   } finally {
